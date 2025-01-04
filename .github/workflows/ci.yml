@@ -27,12 +27,12 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
         env:
-          TF_VAR_SNOWFLAKE_REGION: ${{ secrets.SNOWFLAKE_REGION }}
-          TF_VAR_SNOWFLAKE_ACCOUNT_NAME: ${{ secrets.SNOWFLAKE_ACCOUNT_NAME }}
-          TF_VAR_SNOWFLAKE_ORGANIZATION_NAME: ${{ secrets.SNOWFLAKE_ORGANIZATION_NAME }}
-          TF_VAR_SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-          TF_VAR_SNOWFLAKE_AUTHENTICATOR: ${{ secrets.SNOWFLAKE_AUTHENTICATOR }}
-          TF_VAR_SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+          SNOWFLAKE_REGION: ${{ secrets.SNOWFLAKE_REGION }}
+          SNOWFLAKE_ACCOUNT_NAME: ${{ secrets.SNOWFLAKE_ACCOUNT_NAME }}
+          SNOWFLAKE_ORGANIZATION_NAME: ${{ secrets.SNOWFLAKE_ORGANIZATION_NAME }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_AUTHENTICATOR: ${{ secrets.SNOWFLAKE_AUTHENTICATOR }}
+          SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
