@@ -25,15 +25,6 @@ jobs:
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
 
-      - name: Show Environment Variables
-        run: |
-          echo "$SNOWFLAKE_REGION"
-          echo "$SNOWFLAKE_ACCOUNT_NAME"
-          echo "$SNOWFLAKE_ORGANIZATION_NAME"
-          echo "$SNOWFLAKE_USER"
-          echo "$SNOWFLAKE_AUTHENTICATOR"
-          echo "$SNOWFLAKE_PRIVATE_KEY"
-
       - name: Terraform Initialize
         run: terraform init
 
