@@ -27,12 +27,12 @@ jobs:
 
       - name: Show Environment Variables
         run: |
-          echo "TF_VAR_SNOWFLAKE_REGION"
-          echo "TF_VAR_SNOWFLAKE_ACCOUNT_NAME"
-          echo "TF_VAR_SNOWFLAKE_ORGANIZATION_NAME"
-          echo "TF_VAR_SNOWFLAKE_USER"
-          echo "TF_VAR_SNOWFLAKE_AUTHENTICATOR"
-          echo "TF_VAR_SNOWFLAKE_PRIVATE_KEY"
+          echo "$TF_VAR_SNOWFLAKE_REGION"
+          echo "$TF_VAR_SNOWFLAKE_ACCOUNT_NAME"
+          echo "$TF_VAR_SNOWFLAKE_ORGANIZATION_NAME"
+          echo "$TF_VAR_SNOWFLAKE_USER"
+          echo "$TF_VAR_SNOWFLAKE_AUTHENTICATOR"
+          echo "$TF_VAR_SNOWFLAKE_PRIVATE_KEY"
 
       - name: Terraform Initialize
         run: terraform init
